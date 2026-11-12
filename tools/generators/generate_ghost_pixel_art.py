@@ -1,7 +1,11 @@
 import os
 from PIL import Image
 
-def generate_pixel_ghost(output_dir="avatars"):
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+
+
+def generate_pixel_ghost(output_dir=None):
+    output_dir = output_dir or os.path.join(PROJECT_DIR, "avatars")
     os.makedirs(output_dir, exist_ok=True)
     
     # Canvas size for pixel art (72 x 72 pixels)
@@ -177,4 +181,5 @@ def generate_pixel_ghost(output_dir="avatars"):
     print(f"Created {open_path}")
 
 if __name__ == "__main__":
-    generate_pixel_ghost(os.path.join(os.path.dirname(os.path.abspath(__file__)), "avatars"))
+    project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+    generate_pixel_ghost(os.path.join(project_dir, "avatars"))

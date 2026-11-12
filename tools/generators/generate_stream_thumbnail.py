@@ -10,7 +10,7 @@ import math
 import random
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 OUTPUT_DIR = os.path.join(PROJECT_DIR, "assets", "thumbnails")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 OUTPUT_PATH = os.path.join(OUTPUT_DIR, "thumbnail_slither_live.png")

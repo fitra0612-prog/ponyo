@@ -1,7 +1,11 @@
 import os
 from PIL import Image
 
-def generate_ponyo_ghost_avatars(output_dir="avatars"):
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+
+
+def generate_ponyo_ghost_avatars(output_dir=None):
+    output_dir = output_dir or os.path.join(PROJECT_DIR, "avatars")
     os.makedirs(output_dir, exist_ok=True)
     
     # 64 x 64 native pixel grid
@@ -679,7 +683,8 @@ def draw_ojigi():
     return outlined.resize((GW * SCALE, GH * SCALE), Image.Resampling.NEAREST)
 
 
-def generate_pat_hand_sprites(output_dir="avatars"):
+def generate_pat_hand_sprites(output_dir=None):
+    output_dir = output_dir or os.path.join(PROJECT_DIR, "avatars")
     os.makedirs(output_dir, exist_ok=True)
     GW, GH = 64, 64
     SCALE = 9
@@ -834,4 +839,5 @@ def generate_pat_hand_sprites(output_dir="avatars"):
     print(f"Created {up_path}")
 
 if __name__ == "__main__":
-    generate_ponyo_ghost_avatars(os.path.join(os.path.dirname(os.path.abspath(__file__)), "avatars"))
+    project_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+    generate_ponyo_ghost_avatars(os.path.join(project_dir, "avatars"))

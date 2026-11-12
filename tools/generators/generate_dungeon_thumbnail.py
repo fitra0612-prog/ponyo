@@ -10,7 +10,7 @@ import random
 from PIL import Image, ImageDraw, ImageFilter, ImageEnhance, ImageFont
 
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 THUMBNAIL_DIR = os.path.join(PROJECT_DIR, "assets", "thumbnails")
 DUNGEON_ASSET_DIR = os.path.join(PROJECT_DIR, "assets", "dungeon")
 os.makedirs(THUMBNAIL_DIR, exist_ok=True)

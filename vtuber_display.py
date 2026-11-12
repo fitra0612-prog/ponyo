@@ -119,7 +119,7 @@ class VTuberDisplay:
         ojigi_path = os.path.join(self.avatar_dir, "ojigi.png")
 
         if not os.path.exists(closed_path) or not os.path.exists(star_path) or not os.path.exists(ojigi_path):
-            from generate_ponyo_avatar import generate_ponyo_ghost_avatars
+            from tools.generators.generate_ponyo_avatar import generate_ponyo_ghost_avatars
             generate_ponyo_ghost_avatars(self.avatar_dir)
 
         self.img_closed_orig = pygame.image.load(closed_path).convert_alpha()
@@ -152,7 +152,7 @@ class VTuberDisplay:
         pat_down_path = os.path.join(self.avatar_dir, "pat_hand_down.png")
         pat_up_path = os.path.join(self.avatar_dir, "pat_hand_up.png")
         if not os.path.exists(pat_down_path) or not os.path.exists(pat_up_path):
-            from generate_ponyo_avatar import generate_pat_hand_sprites
+            from tools.generators.generate_ponyo_avatar import generate_pat_hand_sprites
             generate_pat_hand_sprites(self.avatar_dir)
 
         self.img_hand_down_orig = pygame.image.load(pat_down_path).convert_alpha()
@@ -164,7 +164,7 @@ class VTuberDisplay:
         if not os.path.exists(acc_dir) or any(
             not os.path.exists(os.path.join(acc_dir, filename)) for filename in required_accessories
         ):
-            from generate_accessories import generate_all_accessories
+            from tools.generators.generate_accessories import generate_all_accessories
             generate_all_accessories(acc_dir)
 
         for k in self.accessory_keys:

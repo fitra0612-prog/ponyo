@@ -15,7 +15,8 @@ Menghasilkan aksesoris pixel art retro pada grid 64x64 (skala 576x576):
 import os
 from PIL import Image
 
-ACCESSORIES_DIR = os.path.join(os.path.dirname(__file__), "avatars", "accessories")
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+ACCESSORIES_DIR = os.path.join(PROJECT_DIR, "avatars", "accessories")
 
 
 def generate_all_accessories(output_dir: str = ACCESSORIES_DIR):

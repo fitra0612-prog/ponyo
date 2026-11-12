@@ -136,15 +136,18 @@ VTUBER/
 ├── yapping_catalog.py         # Katalog topik & sudut pandang celotehan
 ├── mic_lip_sync.py            # Lip-sync mikrofon (mode co-host manusia)
 │
-├── generate_ponyo_avatar.py   # Generator sprite avatar (14 emosi + gestur)
-├── generate_accessories.py    # Generator 8 aksesoris pixel-art
-├── generate_haunted_brick_wall.py
-├── generate_dungeon_thumbnail.py
-├── generate_chess_thumbnail.py
-├── generate_roblox_thumbnail.py
-├── generate_stream_thumbnail.py
-├── generate_ghost_pixel_art.py
-├── generate_default_avatar.py
+├── tools/
+│   ├── __init__.py
+│   └── generators/            # Generator avatar, aksesori, background, thumbnail
+│       ├── generate_ponyo_avatar.py
+│       ├── generate_accessories.py
+│       ├── generate_haunted_brick_wall.py
+│       ├── generate_dungeon_thumbnail.py
+│       ├── generate_chess_thumbnail.py
+│       ├── generate_roblox_thumbnail.py
+│       ├── generate_stream_thumbnail.py
+│       ├── generate_ghost_pixel_art.py
+│       └── generate_default_avatar.py
 │
 ├── test/                      # Seluruh test suite
 │   ├── test_pipeline.py       # Uji integrasi seluruh pipeline
@@ -236,9 +239,9 @@ SAWERIA_STREAM_KEY=
 
 ### 4. Generate Asset Avatar
 ```bash
-python generate_ponyo_avatar.py
-python generate_accessories.py
-python generate_haunted_brick_wall.py
+python -m tools.generators.generate_ponyo_avatar
+python -m tools.generators.generate_accessories
+python -m tools.generators.generate_haunted_brick_wall
 ```
 
 ### 5. Jalankan

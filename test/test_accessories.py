@@ -2,7 +2,7 @@
 import os
 import tempfile
 
-from generate_accessories import generate_all_accessories
+from tools.generators.generate_accessories import generate_all_accessories
 
 
 def test_generated_wardrobe_has_new_accessories_without_cat_ears():

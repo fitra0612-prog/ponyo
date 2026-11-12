@@ -1,7 +1,11 @@
 import os
 from PIL import Image, ImageDraw
 
-def create_default_avatars(output_dir="avatars"):
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+
+
+def create_default_avatars(output_dir=None):
+    output_dir = output_dir or os.path.join(PROJECT_DIR, "avatars")
     os.makedirs(output_dir, exist_ok=True)
     width, height = 512, 512
     
