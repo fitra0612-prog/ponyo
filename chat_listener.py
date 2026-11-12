@@ -101,7 +101,7 @@ class ChatListener:
                 self.chat_queue.put((author, message))
             except (EOFError, KeyboardInterrupt):
                 break
-            except Exception as e:
+            except Exception:
                 pass
 
     def stop(self):

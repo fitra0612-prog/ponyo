@@ -16,7 +16,6 @@ def generate_pixel_ghost(output_dir=None):
     C_TRANS = (0, 0, 0, 0)
     C_OUTLINE = (38, 42, 58, 255)       # Dark slate outline
     C_WHITE = (255, 255, 255, 255)      # Primary body
-    C_HIGHLIGHT = (255, 255, 255, 255)
     C_SHADOW_1 = (222, 230, 242, 255)   # Light soft cool shadow
     C_SHADOW_2 = (188, 198, 218, 255)   # Deeper crease shadow
     C_EYE = (24, 24, 32, 255)           # Bead eyes

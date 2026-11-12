@@ -24,7 +24,7 @@ Ponyo adalah karakter hantu cewek putih retro pixel-art yang bisa membaca chat p
 - **Belajar Slang Otomatis** — Mempelajari istilah baru dari penonton, meminta klarifikasi jika belum yakin, dan hanya memakai slang yang sudah terkonfirmasi
 - **Production Hardening** — Metrik latency p50/p95/p99, counter fallback/error, antrean TTS prioritas, emergency silence F10, dan reconnect YouTube exponential backoff
 - **Diary Refleksi** — Mencatat momen penting setiap sesi streaming
-- **Evaluasi Bahasa Indonesia** — Corpus uji lokal di `data/indonesian_chat_evaluation.json` untuk greeting, slang, typo, pujian, pertanyaan, dan konteks game
+- **Evaluasi Bahasa Indonesia** — Corpus uji lokal di `data/seed/indonesian_chat_evaluation.json` untuk greeting, slang, typo, pujian, pertanyaan, dan konteks game
 
 ### 🗣️ Naturalness Bahasa Indonesia
 - Pesan asli dinormalisasi secara ringan tanpa mengubah arsip chat mentah.
@@ -166,10 +166,18 @@ VTUBER/
 │   └── dungeon/               # Referensi visual Dungeon Slasher
 ├── sfx/                       # Efek suara WAV 8-bit
 ├── models/piper/              # Model TTS Piper ONNX (~63 MB)
-└── data/                      # Data persisten (diary, loyalitas, slang)
+├── data/
+│   ├── seed/                  # Corpus evaluasi dan data awal yang dapat di-version-control
+│   └── runtime/               # Diary, loyalitas, slang; state lokal, tidak di-commit
+├── requirements.txt           # Dependensi runtime
+├── requirements-dev.txt       # Dependensi test dan lint
+├── pyproject.toml             # Konfigurasi pytest, Ruff, dan metadata project
+└── .github/workflows/tests.yml # CI compile + regression test
 ```
 
 **Total: ~9.500 baris kode Python**
+
+`data/runtime/` dibuat otomatis saat runtime dan tidak di-version-control. File model `.onnx` tetap tersedia pada checkout saat ini; `.gitattributes` sudah menyiapkan Git LFS untuk model besar pada commit berikutnya.
 
 ---
 
@@ -185,16 +193,10 @@ VTUBER/
 | Ollama | v0.9+ dengan model `qwen2.5:3b` + `moondream:latest` |
 
 ### Dependensi Python
-```
-pygame>=2.6
-Pillow>=13.0
-requests>=2.34
-edge-tts>=7.3
-python-chess>=1.11
-numpy>=2.5
-onnxruntime>=1.31
-piper-tts
-python-dotenv
+Dependensi runtime tercatat di `requirements.txt`. Untuk development dan test, gunakan `requirements-dev.txt` yang juga memasang pytest dan Ruff.
+
+```bash
+python -m pip install -r requirements-dev.txt
 ```
 
 ---
@@ -207,7 +209,7 @@ git clone <repo-url> VTUBER
 cd VTUBER
 python -m venv .venv
 .venv\Scripts\activate      # Windows
-pip install pygame Pillow requests edge-tts python-chess numpy onnxruntime piper-tts python-dotenv
+python -m pip install -r requirements-dev.txt
 ```
 
 ### 2. Install Ollama + Model AI
@@ -361,11 +363,17 @@ python test/test_pipeline.py
 # Simulasi donasi Saweria lokal
 python test/test_saweria.py --amount 75000 --name "TestDonatur" --message "Semangat Ponyo!"
 
-# Jalankan seluruh test suite
+# Jalankan seluruh test suite (pytest)
+python -m pytest test
+
+# Jalankan regresi ringan tanpa pytest
 for %f in (test\test_*.py) do python "%f"
 
-# Compile check semua modul
-python -m py_compile *.py
+# Compile check semua modul runtime, tools, dan test
+python -m compileall -q .
+
+# Lint statis
+python -m ruff check .
 ```
 
 ---

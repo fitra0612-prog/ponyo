@@ -16,8 +16,7 @@ Fitur visual:
 
 import os
 import math
-import random
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont
 
 PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 OUTPUT_DIR = os.path.join(PROJECT_DIR, "assets", "thumbnails")

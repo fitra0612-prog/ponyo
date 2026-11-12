@@ -1,12 +1,10 @@
-import os
 import re
 import time
 import random
 import ctypes
 from ctypes import wintypes
-import requests
 from collections import deque
-from config import VTUBER_SYSTEM_PROMPT, OLLAMA_REQUEST_TIMEOUT, OLLAMA_MAX_ATTEMPTS, YAP_PLAYFUL_CHANCE
+from config import OLLAMA_REQUEST_TIMEOUT, OLLAMA_MAX_ATTEMPTS, YAP_PLAYFUL_CHANCE
 from ollama_runtime import ollama_runtime
 from content_policy import sanitize_output
 from yapping_catalog import (
@@ -14,7 +12,6 @@ from yapping_catalog import (
     get_yapping_angle,
     get_fallback_yap,
     get_playful_yap,
-    PLAYFUL_YAPS,
     ensure_complete_sentence
 )
 from screen_ocr import screen_ocr

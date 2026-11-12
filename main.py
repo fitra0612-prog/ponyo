@@ -34,7 +34,6 @@ from chat_quiz import chat_quiz
 from saweria_receiver import SaweriaReceiver
 from worker_runtime import WorkerRuntime
 from ollama_runtime import ollama_health
-from yapping_catalog import classify_screen
 from local_vlm import local_vlm
 from content_policy import sanitize_output
 from runtime_metrics import runtime_metrics

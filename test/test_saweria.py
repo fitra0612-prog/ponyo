@@ -7,7 +7,6 @@ Penggunaan:
     .venv/Scripts/python.exe test_saweria.py --name "Sultan Budi" --amount 100000 --message "Semangat live streamnya Ponyo!"
 """
 
-import sys
 import argparse
 import json
 import urllib.request

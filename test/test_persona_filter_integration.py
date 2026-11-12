@@ -1,5 +1,5 @@
 """Focused tests for integrating Ponyo persona and chat moderation."""
-from ponyo_filter import Moderator, check_text, clean_for_tts
+from ponyo_filter import Moderator, clean_for_tts
 from ponyo_persona import build_persona_prompt, build_messages
 
 

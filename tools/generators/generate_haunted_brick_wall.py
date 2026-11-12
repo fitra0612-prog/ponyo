@@ -12,7 +12,7 @@ Menghasilkan 2 ukuran:
 import os
 import math
 import random
-from PIL import Image, ImageDraw
+from PIL import Image
 
 def create_haunted_brick_wall(width=1920, height=1080, scale=6):
     # Dimensi kanvas pixel art murni
@@ -25,11 +25,9 @@ def create_haunted_brick_wall(width=1920, height=1080, scale=6):
     # Palet Warna Rumah Hantu
     # Bata Gelap & Lembap
     PAL_MORTAR = (20, 18, 30)
-    PAL_BRICK_BASE = (38, 34, 54)
     PAL_BRICK_DARK = (28, 25, 40)
     PAL_BRICK_MID = (46, 42, 66)
     PAL_BRICK_LIGHT = (64, 58, 88)
-    PAL_BRICK_HIGHLIGHT = (82, 75, 112)
     
     # Lumut & Kelembapan Berhantu
     PAL_MOSS_DARK = (24, 46, 38)
@@ -65,7 +63,7 @@ def create_haunted_brick_wall(width=1920, height=1080, scale=6):
             
             # Beberapa bata rusak / pecah / bolong
             is_broken = (random.random() < 0.08)
-            is_mossy = (random.random() < 0.25)
+            _is_mossy = (random.random() < 0.25)
             
             for by in range(brick_h):
                 py = y + by

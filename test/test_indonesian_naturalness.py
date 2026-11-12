@@ -1,5 +1,4 @@
 """Focused regression tests for natural Indonesian livestream replies."""
-import json
 import tempfile
 import os
 

@@ -9,11 +9,11 @@ import os
 import json
 import time
 import re
-import requests
 from config import OLLAMA_URL, OLLAMA_MODEL, OLLAMA_REQUEST_TIMEOUT
 from ollama_runtime import ollama_runtime
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(PROJECT_DIR, "data", "runtime")
 os.makedirs(DATA_DIR, exist_ok=True)
 
 DIARY_FILE = os.path.join(DATA_DIR, "ponyo_diary.json")

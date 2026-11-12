@@ -12,8 +12,7 @@ dengan komposisi visual ala streamer catur profesional & VTuber anime:
 
 import os
 import math
-import random
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont
 
 PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 OUTPUT_DIR = os.path.join(PROJECT_DIR, "assets", "thumbnails")
@@ -127,8 +126,7 @@ def draw_pixel_king(draw, x, y, size=64, is_white=True):
     ]
     c_main = (255, 220, 60) if is_white else (50, 48, 65)
     c_shade = (210, 160, 30) if is_white else (30, 28, 42)
-    c_out = (35, 25, 10) if is_white else (15, 12, 22)
-    
+
     for r, row in enumerate(grid):
         for c, ch in enumerate(row):
             if ch == '#':
@@ -238,7 +236,6 @@ def generate_chess_thumbnail():
 
         # Buat Outline / Glow Putih & Cyan di Sekeliling Ponyo (Sticker Effect ala YouTube)
         glow_mask = Image.new("RGBA", (ponyo_size + 40, ponyo_size + 40), (0, 0, 0, 0))
-        gm_draw = ImageDraw.Draw(glow_mask)
         p_alpha = ponyo_scaled.split()[3]
 
         # Outer thick border sticker

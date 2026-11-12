@@ -1,5 +1,3 @@
-import os
-import sys
 
 def test_all():
     print("[TEST 1/3] Testing AI Brain...")

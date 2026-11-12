@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ponyo-vtuber"
+version = "0.1.0"
+description = "Offline Indonesian AI VTuber runtime for Ponyo"
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "Private project"}
+
+dependencies = [
+    "Pillow>=13.0",
+    "aiohttp>=3.9",
+    "chess>=1.11",
+    "edge-tts>=7.3",
+    "numpy>=2.0",
+    "onnxruntime>=1.18",
+    "piper-tts>=1.2",
+    "pygame>=2.6",
+    "python-dotenv>=1.0",
+    "requests>=2.31",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+pythonpath = ["."]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+exclude = [".venv", "models", "avatars", "assets", "data"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+ignore = ["E501"]
+
+[tool.setuptools]
+py-modules = []

@@ -1,7 +1,13 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+load_dotenv(os.path.join(PROJECT_DIR, ".env"))
+
+
+def _project_path(value: str, default: str) -> str:
+    path = os.getenv(value, default).strip()
+    return path if os.path.isabs(path) else os.path.join(PROJECT_DIR, path)
 
 # =============================================================================
 # Ollama Local AI Configuration (100% Offline, Bebas Kuota, & Unlimited)
@@ -32,13 +38,13 @@ YOUTUBE_VIDEO_ID = os.getenv("YOUTUBE_VIDEO_ID", "").strip()
 # TTS Voice Configuration (100% Offline Local Neural TTS via Piper)
 # Pilihan engine: "local" (Piper ONNX Neural TTS - 100% Offline) atau "cloud" (Microsoft Edge-TTS)
 TTS_ENGINE_TYPE = os.getenv("TTS_ENGINE_TYPE", "local").lower()
-PIPER_MODEL_PATH = os.getenv(
+PIPER_MODEL_PATH = _project_path(
     "PIPER_MODEL_PATH",
-    os.path.join(os.path.dirname(__file__), "models", "piper", "id_ID-news_tts-medium.onnx")
+    os.path.join("models", "piper", "id_ID-news_tts-medium.onnx"),
 )
-PIPER_CONFIG_PATH = os.getenv(
+PIPER_CONFIG_PATH = _project_path(
     "PIPER_CONFIG_PATH",
-    os.path.join(os.path.dirname(__file__), "models", "piper", "id_ID-news_tts-medium.onnx.json")
+    os.path.join("models", "piper", "id_ID-news_tts-medium.onnx.json"),
 )
 PIPER_PITCH_FACTOR = float(os.getenv("PIPER_PITCH_FACTOR", "1.20")) # 1.20x nada imut dan ceria untuk karakter hantu Ponyo
 
@@ -72,10 +78,7 @@ MANUAL_BOOST_COOLDOWN = float(os.getenv("MANUAL_BOOST_COOLDOWN", "2.5")) # Coold
 
 # Chess Coach & Commentator Configuration (Default: Nonaktif, tekan [K] / [G] untuk aktifkan)
 ENABLE_CHESS_COACH = os.getenv("ENABLE_CHESS_COACH", "false").lower() in ["true", "1", "yes"]
-STOCKFISH_PATH = os.getenv(
-    "STOCKFISH_PATH",
-    r"C:\Users\admin\Documents\Project\engine\stockfish\stockfish-windows-x86-64-universal.exe"
-)
+STOCKFISH_PATH = os.getenv("STOCKFISH_PATH", "").strip()
 CHESS_COACH_DEPTH = int(os.getenv("CHESS_COACH_DEPTH", "15"))
 CHESS_AUTO_PLAY = os.getenv("CHESS_AUTO_PLAY", "false").lower() in ["true", "1", "yes"]
 

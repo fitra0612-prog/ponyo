@@ -1,4 +1,3 @@
-import time
 
 from runtime_metrics import RuntimeMetrics
 from worker_runtime import WorkerRuntime

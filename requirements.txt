@@ -1,0 +1,12 @@
+# Runtime dependencies for Ponyo VTuber
+# Python 3.12+ on Windows 10/11
+Pillow>=13.0
+aiohttp>=3.9
+chess>=1.11
+edge-tts>=7.3
+numpy>=2.0
+onnxruntime>=1.18
+piper-tts>=1.2
+pygame>=2.6
+python-dotenv>=1.0
+requests>=2.31

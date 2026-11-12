@@ -58,7 +58,6 @@ def create_dungeon_slasher_ponyo_thumbnail(output_path: str | None = None):
 
     # Palet Warna Karakter Ksatria Ponyo
     C_OUTLINE = (24, 26, 38, 255)
-    C_OUTLINE_SOFT = (45, 48, 68, 255)
 
     C_STEEL_DARK = (75, 85, 110, 255)
     C_STEEL_MID = (155, 172, 198, 255)
@@ -119,7 +118,7 @@ def create_dungeon_slasher_ponyo_thumbnail(output_path: str | None = None):
     pdraw.line(cape_poly + [cape_poly[0]], fill=C_OUTLINE, width=s(5))
 
     # B. BADAN HANTU PONYO (Floating Ghost Body dengan Shading Sinematik)
-    cx, cy = 600, 550
+    cx = 600
     ghost_pts = []
     # Kubah kepala & torso
     for deg in range(180, 361, 5):

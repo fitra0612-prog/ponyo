@@ -8,7 +8,6 @@ Menggunakan model visual lokal Ollama (moondream:latest) 100% offline untuk:
    TIDAK membebani atau memperlambat respon suara TTS dan animasi Pygame!
 """
 
-import os
 import re
 import time
 import base64
@@ -100,7 +99,7 @@ class LocalVLMEngine:
             buf = BytesIO()
             img_resized.convert("RGB").save(buf, format="JPEG", quality=75)
             return base64.b64encode(buf.getvalue()).decode("utf-8")
-        except Exception as e:
+        except Exception:
             # print(f"[VLM CAPTURE ERROR] {e}")
             return None
 

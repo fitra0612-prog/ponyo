@@ -7,7 +7,6 @@ instruksi langkah terbaik serta komentar posisi dalam Bahasa Indonesia khas Pony
 """
 
 import os
-import sys
 import time
 import random
 import queue
@@ -863,7 +862,7 @@ class ChessCoach:
             elif len(active_pieces) == 1:
                 return f"Di papan saat ini {active_pieces[0]} kita sudah maju membuka jalan. Yuk keluarkan perwira lainnya supaya serangan kita makin kuat!"
             else:
-                return f"Pertandingan baru dimulai di papan! Yuk kita kuasai petak tengah pakai Pion dan keluarkan Kuda serta Gajah kita!"
+                return "Pertandingan baru dimulai di papan! Yuk kita kuasai petak tengah pakai Pion dan keluarkan Kuda serta Gajah kita!"
 
         elif mode == 2:
             # Sudut pandang 3: Keseimbangan materi bidak di papan
@@ -872,7 +871,7 @@ class ChessCoach:
             elif mat_diff <= -2:
                 return "Walaupun kita sempat kehilangan bidak di papan, jangan panik ya! Ponyo bantu cari celah taktik buat membalikkan keadaan!"
             else:
-                return f"Pertarungan di papan catur masih sengit dan imbang nih! Belum ada yang blunder, jadi perhatikan setiap langkah lawan baik-baik ya!"
+                return "Pertarungan di papan catur masih sengit dan imbang nih! Belum ada yang blunder, jadi perhatikan setiap langkah lawan baik-baik ya!"
 
         else:
             # Sudut pandang 4: Keamanan Raja di papan

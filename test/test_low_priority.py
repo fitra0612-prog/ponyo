@@ -1,8 +1,6 @@
 """Regression tests for low-priority resilience and personalization improvements."""
-import json
 
 from ai_brain import AIBrain
-from config import QWEN_FAST_MODEL, QWEN_FALLBACK_MODEL
 from fallback_engine import FallbackResponseEngine
 from session_memory import SessionMemory
 from visual_validation import classify_visual_context

@@ -1,15 +1,10 @@
-import os
 import re
-import random
 import threading
 import requests
 from collections import deque
 from config import (
-    VTUBER_SYSTEM_PROMPT,
     OLLAMA_URL,
-    OLLAMA_MODEL,
     OLLAMA_REQUEST_TIMEOUT,
-    OLLAMA_MAX_ATTEMPTS,
     CHAT_MODEL_NAME,
     QWEN_FAST_MODEL,
     QWEN_FALLBACK_MODEL,

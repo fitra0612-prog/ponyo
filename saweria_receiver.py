@@ -9,7 +9,6 @@ Mendukung:
 5. Simulasi donasi lokal untuk pengetesan offline / tanpa biaya.
 """
 
-import os
 import json
 import time
 import hmac
@@ -140,9 +139,9 @@ class SaweriaReceiver:
             print("=" * 64)
             print(f"[SAWERIA] Webhook Receiver Aktif di http://localhost:{self.port}/webhook")
             if self.stream_key:
-                print(f"[SAWERIA] Validasi Signature HMAC-SHA256: AKTIF (Stream Key Terpasang)")
+                print("[SAWERIA] Validasi Signature HMAC-SHA256: AKTIF (Stream Key Terpasang)")
             else:
-                print(f"[SAWERIA] Validasi Signature: TERBUKA (Menerima semua payload Saweria)")
+                print("[SAWERIA] Validasi Signature: TERBUKA (Menerima semua payload Saweria)")
             print("=" * 64)
         except Exception as e:
             print(f"[SAWERIA ERROR] Gagal menjalankan server webhook pada port {self.port}: {e}")

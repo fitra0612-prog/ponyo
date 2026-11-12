@@ -1,7 +1,7 @@
 """Regression tests for the Saweria simulation CLI exit status."""
 from unittest.mock import patch
 
-import test_saweria
+from test import test_saweria
 
 
 def test_send_test_donation_returns_false_when_receiver_is_unreachable():

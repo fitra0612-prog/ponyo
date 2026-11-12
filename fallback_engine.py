@@ -1,5 +1,4 @@
 """Context-aware offline fallback responses with anti-repetition rotation."""
-import random
 
 
 class FallbackResponseEngine:

@@ -1,7 +1,6 @@
 """Small JSON-lines logger for runtime failures and latency diagnostics."""
 import json
 import logging
-import sys
 import time
 from typing import Callable, Optional
 

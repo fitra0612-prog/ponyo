@@ -6,6 +6,7 @@
 # Python and local environments
 .venv/
 venv/
+*.egg-info/
 __pycache__/
 *.py[cod]
 *.pyo
@@ -17,6 +18,8 @@ __pycache__/
 logs/
 cache/
 .cache/
+data/runtime/*
+!data/runtime/.gitkeep
 
 # OS/editor files
 .DS_Store
