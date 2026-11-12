@@ -149,16 +149,19 @@ VTUBER/
 ├── test_pipeline.py           # Uji integrasi seluruh pipeline
 ├── test_saweria.py            # Simulasi donasi lokal
 │
-├── avatars/                   # Sprite PNG + 8 aksesoris pixel-art
+├── avatars/                   # Sprite PNG + aksesoris pixel-art
 │   ├── happy.png, angry.png, cry.png, ...
 │   ├── ojigi.png, wave_1.png, wave_2.png
 │   └── accessories/
 │       ├── ribbon.png, crown.png, knight.png, ...
 │
+├── assets/
+│   ├── backgrounds/           # Background avatar dan OBS
+│   ├── thumbnails/            # Thumbnail YouTube hasil generator
+│   └── dungeon/               # Referensi visual Dungeon Slasher
 ├── sfx/                       # Efek suara WAV 8-bit
 ├── models/piper/              # Model TTS Piper ONNX (~63 MB)
-├── data/                      # Data persisten (diary, loyalitas, slang)
-└── .venv/                     # Python 3.12 virtual environment
+└── data/                      # Data persisten (diary, loyalitas, slang)
 ```
 
 **Total: ~9.500 baris kode Python**

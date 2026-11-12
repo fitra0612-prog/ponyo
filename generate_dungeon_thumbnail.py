@@ -10,13 +10,20 @@ import random
 from PIL import Image, ImageDraw, ImageFilter, ImageEnhance, ImageFont
 
 
-def create_dungeon_slasher_ponyo_thumbnail(output_path: str = "thumbnail_dungeon_slasher_ponyo.png"):
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+THUMBNAIL_DIR = os.path.join(PROJECT_DIR, "assets", "thumbnails")
+DUNGEON_ASSET_DIR = os.path.join(PROJECT_DIR, "assets", "dungeon")
+os.makedirs(THUMBNAIL_DIR, exist_ok=True)
+
+
+def create_dungeon_slasher_ponyo_thumbnail(output_path: str | None = None):
+    output_path = output_path or os.path.join(THUMBNAIL_DIR, "thumbnail_dungeon_slasher_ponyo.png")
     TW, TH = 1280, 720
     # Render pada skala 2x (2560x1440) untuk hasil super-sampling yang halus, tajam, dan bebas jagged edge
     SW, SH = TW * 2, TH * 2
 
     # 1. Muat Background Original Dungeon Slasher
-    orig_header_path = "assets_dungeon/user_header.jpg"
+    orig_header_path = os.path.join(DUNGEON_ASSET_DIR, "user_header.jpg")
     if not os.path.exists(orig_header_path):
         raise FileNotFoundError(f"File {orig_header_path} tidak ditemukan!")
 

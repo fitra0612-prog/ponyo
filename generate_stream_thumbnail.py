@@ -10,9 +10,11 @@ import math
 import random
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-OUTPUT_DIR = os.path.abspath("C:/Users/admin/Documents/Project/VTUBER")
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR = os.path.join(PROJECT_DIR, "assets", "thumbnails")
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 OUTPUT_PATH = os.path.join(OUTPUT_DIR, "thumbnail_slither_live.png")
-AVATAR_PATH = os.path.join(OUTPUT_DIR, "avatars/open.png")
+AVATAR_PATH = os.path.join(PROJECT_DIR, "avatars", "open.png")
 
 W, H = 1280, 720
 

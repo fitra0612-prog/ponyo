@@ -177,4 +177,4 @@ def generate_pixel_ghost(output_dir="avatars"):
     print(f"Created {open_path}")
 
 if __name__ == "__main__":
-    generate_pixel_ghost("C:/Users/admin/Documents/Project/VTUBER/avatars")
+    generate_pixel_ghost(os.path.join(os.path.dirname(os.path.abspath(__file__)), "avatars"))

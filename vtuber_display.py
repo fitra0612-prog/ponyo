@@ -173,7 +173,7 @@ class VTuberDisplay:
                 self.accessories_orig[k] = pygame.image.load(p).convert_alpha()
 
         # Load background brick wall rumah hantu
-        bg_wall_path = os.path.join(os.path.dirname(__file__), "background_brick_wall_avatar.png")
+        bg_wall_path = os.path.join(os.path.dirname(__file__), "assets", "backgrounds", "background_brick_wall_avatar.png")
         if os.path.exists(bg_wall_path):
             self.bg_brick_wall_orig = pygame.image.load(bg_wall_path).convert()
             self.bg_brick_wall = pygame.transform.scale(self.bg_brick_wall_orig, (self.width, self.height))

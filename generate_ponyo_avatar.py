@@ -834,4 +834,4 @@ def generate_pat_hand_sprites(output_dir="avatars"):
     print(f"Created {up_path}")
 
 if __name__ == "__main__":
-    generate_ponyo_ghost_avatars("C:/Users/admin/Documents/Project/VTUBER/avatars")
+    generate_ponyo_ghost_avatars(os.path.join(os.path.dirname(os.path.abspath(__file__)), "avatars"))

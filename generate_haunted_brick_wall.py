@@ -288,8 +288,9 @@ def create_haunted_brick_wall(width=1920, height=1080, scale=6):
 
 
 def generate_all_backgrounds():
-    output_dir = os.path.dirname(__file__)
-    
+    output_dir = os.path.join(os.path.dirname(__file__), "assets", "backgrounds")
+    os.makedirs(output_dir, exist_ok=True)
+
     # 1. Background Lebar untuk OBS / YouTube Live (1920x1080 Full HD)
     bg_1080p = create_haunted_brick_wall(width=1920, height=1080, scale=6)
     path_1080p = os.path.join(output_dir, "background_haunted_brick_wall.png")
