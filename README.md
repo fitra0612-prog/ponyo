@@ -146,8 +146,10 @@ VTUBER/
 ├── generate_ghost_pixel_art.py
 ├── generate_default_avatar.py
 │
-├── test_pipeline.py           # Uji integrasi seluruh pipeline
-├── test_saweria.py            # Simulasi donasi lokal
+├── test/                      # Seluruh test suite
+│   ├── test_pipeline.py       # Uji integrasi seluruh pipeline
+│   ├── test_saweria.py        # Simulasi donasi lokal
+│   └── test_*.py              # Test komponen dan regresi lainnya
 │
 ├── avatars/                   # Sprite PNG + aksesoris pixel-art
 │   ├── happy.png, angry.png, cry.png, ...
@@ -351,10 +353,13 @@ Avatar Ponyo dirancang zero-HUD: tidak ada teks overlay di atas avatar agar bers
 
 ```bash
 # Uji seluruh pipeline (AI + TTS + Display)
-python test_pipeline.py
+python test/test_pipeline.py
 
 # Simulasi donasi Saweria lokal
-python test_saweria.py --amount 75000 --name "TestDonatur" --message "Semangat Ponyo!"
+python test/test_saweria.py --amount 75000 --name "TestDonatur" --message "Semangat Ponyo!"
+
+# Jalankan seluruh test suite
+for %f in (test\test_*.py) do python "%f"
 
 # Compile check semua modul
 python -m py_compile *.py
