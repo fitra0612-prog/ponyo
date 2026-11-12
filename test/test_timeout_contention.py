@@ -2,7 +2,7 @@
 import threading
 import time
 
-from ollama_runtime import OllamaRuntime
+from ponyo.ollama_runtime import OllamaRuntime
 
 
 def test_low_priority_lane_fails_fast_when_inference_is_busy():

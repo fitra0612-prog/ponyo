@@ -1,8 +1,8 @@
-from dungeon_slasher_knowledge import (
+from ponyo.dungeon_slasher_knowledge import (
     DUNGEON_SLASHER_KNOWLEDGE_PROMPT,
     get_dungeon_slasher_context,
 )
-from yapping_catalog import classify_screen, get_yapping_angle, get_fallback_yap
+from ponyo.yapping_catalog import classify_screen, get_yapping_angle, get_fallback_yap
 
 
 def test_dungeon_slasher_is_classified_separately():

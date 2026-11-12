@@ -1,8 +1,8 @@
 """Regression tests for natural playful auto-yapping."""
 from unittest.mock import patch
 
-from screen_commentator import ScreenCommentator
-from yapping_catalog import get_playful_yap, PLAYFUL_YAPS
+from ponyo.screen_commentator import ScreenCommentator
+from ponyo.yapping_catalog import get_playful_yap, PLAYFUL_YAPS
 
 
 class DummyBrain:
@@ -32,7 +32,7 @@ def test_playful_yap_does_not_require_screen_context():
 def test_commentator_can_yap_playfully_without_screen():
     commentator = ScreenCommentator(DummyBrain(), yap_interval=25)
     with patch.object(commentator, "get_screen_context", return_value=""), \
-         patch("screen_commentator.random.random", return_value=0.0):
+         patch("ponyo.screen_commentator.random.random", return_value=0.0):
         result = commentator.generate_yap()
     assert result
     assert result in PLAYFUL_YAPS
@@ -42,9 +42,9 @@ def test_commentator_can_yap_playfully_without_screen():
 def test_commentator_randomly_chooses_playful_mode_with_screen():
     commentator = ScreenCommentator(DummyBrain(), yap_interval=25)
     with patch.object(commentator, "get_screen_context", return_value="Minecraft"), \
-         patch("screen_commentator.random.random", return_value=0.0), \
-         patch("screen_commentator.screen_ocr.extract_screen_text", return_value=""), \
-         patch("screen_commentator.local_vlm.get_visual_context", return_value=""):
+         patch("ponyo.screen_commentator.random.random", return_value=0.0), \
+         patch("ponyo.screen_commentator.screen_ocr.screen_ocr.extract_screen_text", return_value=""), \
+         patch("ponyo.screen_commentator.local_vlm.local_vlm.get_visual_context", return_value=""):
         result = commentator.generate_yap()
     assert result
     assert result in PLAYFUL_YAPS

@@ -1,5 +1,5 @@
-from ai_brain import AIBrain
-from ponyo_persona import select_few_shot, build_compact_chat_prompt
+from ponyo.ai_brain import AIBrain
+from ponyo.ponyo_persona import select_few_shot, build_compact_chat_prompt
 
 
 def test_compact_prompt_is_smaller_than_legacy_prompt():

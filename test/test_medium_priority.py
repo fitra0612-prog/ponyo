@@ -3,11 +3,11 @@ import json
 import threading
 import time
 
-from ollama_runtime import OllamaCircuitBreaker, OllamaRuntime
-from session_memory import SessionMemory
-from self_improvement import PostStreamReflector
-from structured_logging import StructuredLogger, structured_logger
-from worker_runtime import WorkerRuntime
+from ponyo.ollama_runtime import OllamaCircuitBreaker, OllamaRuntime
+from ponyo.session_memory import SessionMemory
+from ponyo.self_improvement import PostStreamReflector
+from ponyo.structured_logging import StructuredLogger, structured_logger
+from ponyo.worker_runtime import WorkerRuntime
 
 
 def test_worker_runtime_has_isolated_lanes():
@@ -46,7 +46,7 @@ def test_runtime_timeout_and_resource_conflict_are_bounded():
 
 
 def test_health_monitor_reports_state_without_secrets():
-    from ollama_runtime import OllamaHealthMonitor
+    from ponyo.ollama_runtime import OllamaHealthMonitor
     monitor = OllamaHealthMonitor(url="http://127.0.0.1:1", timeout=0.05)
     result = monitor.check()
     assert result["status"] in {"offline", "degraded", "healthy"}

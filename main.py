@@ -1,11 +1,15 @@
 import sys
 import os
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+
 import time
 import random
 import queue
 import threading
 
-from config import (
+from ponyo.config import (
     YOUTUBE_VIDEO_ID,
     ENABLE_AUTO_YAP,
     YAP_INTERVAL,
@@ -21,22 +25,22 @@ from config import (
     SAWERIA_PORT,
     SAWERIA_STREAM_KEY
 )
-from ai_brain import AIBrain
-from tts_engine import TTSEngine
-from chat_listener import ChatListener
-from vtuber_display import VTuberDisplay
-from screen_commentator import ScreenCommentator
-from manual_slither_hook import ManualSlitherHook
-from chess_coach import ChessCoach
-from self_improvement import stream_reflector
-from sfx_engine import sfx_player
-from chat_quiz import chat_quiz
-from saweria_receiver import SaweriaReceiver
-from worker_runtime import WorkerRuntime
-from ollama_runtime import ollama_health
-from local_vlm import local_vlm
-from content_policy import sanitize_output
-from runtime_metrics import runtime_metrics
+from ponyo.ai_brain import AIBrain
+from ponyo.tts_engine import TTSEngine
+from ponyo.chat_listener import ChatListener
+from ponyo.vtuber_display import VTuberDisplay
+from ponyo.screen_commentator import ScreenCommentator
+from ponyo.manual_slither_hook import ManualSlitherHook
+from ponyo.chess_coach import ChessCoach
+from ponyo.self_improvement import stream_reflector
+from ponyo.sfx_engine import sfx_player
+from ponyo.chat_quiz import chat_quiz
+from ponyo.saweria_receiver import SaweriaReceiver
+from ponyo.worker_runtime import WorkerRuntime
+from ponyo.ollama_runtime import ollama_health
+from ponyo.local_vlm import local_vlm
+from ponyo.content_policy import sanitize_output
+from ponyo.runtime_metrics import runtime_metrics
 
 # Jalur kerja terpisah: chat tetap memprioritaskan pesan terbaru, sedangkan TTS
 # memiliki antrean sendiri agar sintesis tidak memblokir ingestion dan VLM.

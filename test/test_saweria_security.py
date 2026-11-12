@@ -6,7 +6,7 @@ import time
 import urllib.error
 import urllib.request
 
-from saweria_receiver import SaweriaReceiver
+from ponyo.saweria_receiver import SaweriaReceiver
 
 
 PORT = 49226

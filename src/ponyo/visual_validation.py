@@ -1,7 +1,7 @@
 """Deterministic visual evidence fusion for safe game classification."""
 import re
 
-from yapping_catalog import classify_screen
+from .yapping_catalog import classify_screen
 
 
 def _tokens(text):

@@ -1,6 +1,6 @@
 """Focused tests for integrating Ponyo persona and chat moderation."""
-from ponyo_filter import Moderator, clean_for_tts
-from ponyo_persona import build_persona_prompt, build_messages
+from ponyo.ponyo_filter import Moderator, clean_for_tts
+from ponyo.ponyo_persona import build_persona_prompt, build_messages
 
 
 def test_filter_blocks_sensitive_input_and_returns_character_reply():

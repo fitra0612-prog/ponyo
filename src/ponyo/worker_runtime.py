@@ -3,7 +3,7 @@ import queue
 import threading
 from typing import Callable
 
-from structured_logging import structured_logger
+from .structured_logging import structured_logger
 
 
 class WorkerRuntime:

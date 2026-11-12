@@ -1,4 +1,4 @@
-from ai_brain import AIBrain
+from ponyo.ai_brain import AIBrain
 
 
 def test_food_profile_question_uses_instant_reply():

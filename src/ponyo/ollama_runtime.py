@@ -7,10 +7,10 @@ from typing import Any, Dict
 
 import requests
 
-from structured_logging import structured_logger
-from runtime_metrics import runtime_metrics
+from .structured_logging import structured_logger
+from .runtime_metrics import runtime_metrics
 
-from config import (
+from .config import (
     OLLAMA_URL,
     OLLAMA_REQUEST_TIMEOUT,
     OLLAMA_MAX_ATTEMPTS,

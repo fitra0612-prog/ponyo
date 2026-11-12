@@ -8,7 +8,7 @@ import subprocess
 import aiohttp
 from aiohttp.abc import AbstractResolver
 import pygame
-from config import (
+from .config import (
     TTS_VOICE, TTS_PITCH, TTS_SPEED,
     TTS_ENGINE_TYPE, PIPER_MODEL_PATH, PIPER_CONFIG_PATH, PIPER_PITCH_FACTOR
 )

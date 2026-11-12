@@ -4,9 +4,9 @@ import time
 import random
 import threading
 import pygame
-from config import WINDOW_WIDTH, WINDOW_HEIGHT, CHROMA_MODE, ENABLE_SPEECH_BUBBLE
-from sfx_engine import sfx_player
-from mic_lip_sync import mic_lip_sync
+from .config import WINDOW_WIDTH, WINDOW_HEIGHT, CHROMA_MODE, ENABLE_SPEECH_BUBBLE
+from .sfx_engine import sfx_player
+from .mic_lip_sync import mic_lip_sync
 
 CHROMA_PALETTE = {
     "GREEN": (0, 255, 0),

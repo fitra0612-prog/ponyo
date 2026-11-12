@@ -17,7 +17,7 @@ from ctypes import wintypes
 from PIL import ImageGrab
 import chess
 
-from config import (
+from .config import (
     ENABLE_CHESS_COACH,
     STOCKFISH_PATH,
     CHESS_COACH_DEPTH,

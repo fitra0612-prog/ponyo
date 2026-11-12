@@ -9,10 +9,10 @@ import os
 import json
 import time
 import re
-from config import OLLAMA_URL, OLLAMA_MODEL, OLLAMA_REQUEST_TIMEOUT
-from ollama_runtime import ollama_runtime
+from .config import OLLAMA_URL, OLLAMA_MODEL, OLLAMA_REQUEST_TIMEOUT
+from . import ollama_runtime
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 DATA_DIR = os.path.join(PROJECT_DIR, "data", "runtime")
 os.makedirs(DATA_DIR, exist_ok=True)
 
@@ -151,7 +151,7 @@ class DynamicVocabularyLearner:
         """Petunjuk slang tepercaya; bila pesan tersedia, hanya istilah yang relevan."""
         if not self.lexicon:
             return ""
-        from language_naturalness import select_relevant_slangs
+        from .language_naturalness import select_relevant_slangs
         if message:
             return select_relevant_slangs(message, self.lexicon)
         sorted_slangs = sorted(

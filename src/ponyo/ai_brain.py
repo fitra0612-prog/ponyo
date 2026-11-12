@@ -2,7 +2,7 @@ import re
 import threading
 import requests
 from collections import deque
-from config import (
+from .config import (
     OLLAMA_URL,
     OLLAMA_REQUEST_TIMEOUT,
     CHAT_MODEL_NAME,
@@ -10,19 +10,19 @@ from config import (
     QWEN_FALLBACK_MODEL,
     QWEN_ENABLED,
 )
-from session_memory import SessionMemory
-from self_improvement import slang_learner, stream_reflector, viewer_loyalty
-from sfx_engine import sfx_player
-from chat_quiz import chat_quiz
-from yapping_catalog import ensure_complete_sentence
-from local_vlm import local_vlm
-from dungeon_slasher_knowledge import get_dungeon_slasher_context, is_dungeon_slasher_title
-from ollama_runtime import ollama_runtime
-from fallback_engine import FallbackResponseEngine
-from content_policy import classify_text, sanitize_output
-from ponyo_filter import Moderator, safe_name
-from ponyo_persona import build_compact_chat_prompt, select_few_shot
-from language_naturalness import (
+from .session_memory import SessionMemory
+from .self_improvement import slang_learner, stream_reflector, viewer_loyalty
+from .sfx_engine import sfx_player
+from . import chat_quiz
+from .yapping_catalog import ensure_complete_sentence
+from . import local_vlm
+from .dungeon_slasher_knowledge import get_dungeon_slasher_context, is_dungeon_slasher_title
+from . import ollama_runtime
+from .fallback_engine import FallbackResponseEngine
+from .content_policy import classify_text, sanitize_output
+from .ponyo_filter import Moderator, safe_name
+from .ponyo_persona import build_compact_chat_prompt, select_few_shot
+from .language_naturalness import (
     classify_chat_intent,
     is_awkward_reply,
     is_unrecognized_short_term,

@@ -20,7 +20,7 @@ if defined YOUTUBE_VIDEO_ID (
     echo [CHAT] Tidak ada Video ID. Mode offline/terminal aktif tanpa request YouTube.
 )
 echo.
-".venv\Scripts\python.exe" main.py %*
+".venv\Scripts\python.exe" -m main %*
 
 if errorlevel 1 (
     echo.

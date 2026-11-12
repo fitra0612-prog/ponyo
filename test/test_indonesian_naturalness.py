@@ -2,16 +2,16 @@
 import tempfile
 import os
 
-from fallback_engine import FallbackResponseEngine
-from language_naturalness import (
+from ponyo.fallback_engine import FallbackResponseEngine
+from ponyo.language_naturalness import (
     classify_chat_intent,
     is_awkward_reply,
     is_unrecognized_short_term,
     normalize_chat_message,
     select_relevant_slangs,
 )
-from self_improvement import DynamicVocabularyLearner
-from config import VTUBER_SYSTEM_PROMPT
+from ponyo.self_improvement import DynamicVocabularyLearner
+from ponyo.config import VTUBER_SYSTEM_PROMPT
 
 
 def test_normalize_typo_preserves_meaning():

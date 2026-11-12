@@ -15,7 +15,7 @@ def test_generated_wardrobe_has_new_accessories_without_cat_ears():
 
 
 def test_display_source_uses_new_cycle_entries():
-    with open("vtuber_display.py", "r", encoding="utf-8") as handle:
+    with open("src/ponyo/vtuber_display.py", "r", encoding="utf-8") as handle:
         source = handle.read()
     assert '"angel_halo"' in source
     assert '"devil_horns"' in source

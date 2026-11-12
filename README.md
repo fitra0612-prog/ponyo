@@ -107,7 +107,10 @@ Script otomatis untuk membuat thumbnail 1280×720 bertema:
 
 ```
 VTUBER/
-├── main.py                    # Orkestrator utama
+├── main.py                    # Entry point/orchestrator
+├── src/ponyo/                 # Package runtime Ponyo
+│   ├── ai/                    # (modul AI tetap flat untuk kompatibilitas tahap ini)
+│   └── *.py                   # Modul runtime terstruktur
 ├── config.py                  # Konfigurasi terpusat (.env)
 ├── .env                       # Variabel rahasia (API keys, stream ID)
 │
@@ -248,7 +251,7 @@ python -m tools.generators.generate_haunted_brick_wall
 
 ### 5. Jalankan
 ```bash
-python main.py
+python -m main
 ```
 
 ---

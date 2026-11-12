@@ -11,7 +11,7 @@ import argparse
 import json
 import urllib.request
 import urllib.error
-from config import SAWERIA_PORT, SAWERIA_STREAM_KEY
+from ponyo.config import SAWERIA_PORT, SAWERIA_STREAM_KEY
 import hmac
 import hashlib
 

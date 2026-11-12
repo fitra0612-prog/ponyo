@@ -6,7 +6,7 @@ konsisten untuk respons chat.
 """
 from typing import Dict, List, Optional
 
-from ponyo_filter import Moderator, safe_name
+from .ponyo_filter import Moderator, safe_name
 
 HOST_NAME = "Kakak"
 MAX_HISTORY_MESSAGES = 8

@@ -4,20 +4,20 @@ import random
 import ctypes
 from ctypes import wintypes
 from collections import deque
-from config import OLLAMA_REQUEST_TIMEOUT, OLLAMA_MAX_ATTEMPTS, YAP_PLAYFUL_CHANCE
-from ollama_runtime import ollama_runtime
-from content_policy import sanitize_output
-from yapping_catalog import (
+from .config import OLLAMA_REQUEST_TIMEOUT, OLLAMA_MAX_ATTEMPTS, YAP_PLAYFUL_CHANCE
+from . import ollama_runtime
+from .content_policy import sanitize_output
+from .yapping_catalog import (
     YAPPING_CATALOG,
     get_yapping_angle,
     get_fallback_yap,
     get_playful_yap,
     ensure_complete_sentence
 )
-from screen_ocr import screen_ocr
-from local_vlm import local_vlm
-from visual_validation import classify_visual_context
-from dungeon_slasher_knowledge import get_dungeon_slasher_context
+from . import screen_ocr
+from . import local_vlm
+from .visual_validation import classify_visual_context
+from .dungeon_slasher_knowledge import get_dungeon_slasher_context
 # Set DPI awareness for multi-monitor accuracy
 try:
     ctypes.windll.shcore.SetProcessDpiAwareness(2)
@@ -128,10 +128,10 @@ class ScreenCommentator:
         self.last_title = context_title
 
         # Klasifikasikan kategori layar dan ambil sudut pandang celotehan yang pas
-        ocr_snippet = screen_ocr.extract_screen_text(max_chars=120)
+        ocr_snippet = screen_ocr.screen_ocr.extract_screen_text(max_chars=120)
         # Baca cache saja sebelum Qwen; refresh Moondream dijadwalkan setelah
         # prompt yapping selesai agar tidak berebut jalur inferensi.
-        vlm_desc = local_vlm.get_visual_context(max_chars=140, trigger_refresh=False)
+        vlm_desc = local_vlm.local_vlm.get_visual_context(max_chars=140, trigger_refresh=False)
         visual_state = classify_visual_context(context_title, ocr_snippet, vlm_desc)
         category = visual_state["category"]
         category_name = YAPPING_CATALOG.get(category, {}).get("name", "Tampilan Layar")
@@ -152,7 +152,7 @@ class ScreenCommentator:
                 if accurate_chess_yap and not self._is_repetitive(accurate_chess_yap):
                     self.recent_yaps.append(accurate_chess_yap)
                     self.last_yap_time = time.time()
-                    local_vlm.get_visual_context(trigger_refresh=True)
+                    local_vlm.local_vlm.get_visual_context(trigger_refresh=True)
                     return accurate_chess_yap
             except Exception as e:
                 print(f"[YAP CHESS] Fallback ke komentar umum: {e}")
@@ -234,14 +234,14 @@ class ScreenCommentator:
                         if cleaned and not self._is_repetitive(cleaned):
                             self.recent_yaps.append(cleaned)
                             self.last_yap_time = time.time()
-                            local_vlm.get_visual_context(trigger_refresh=True)
+                            local_vlm.local_vlm.get_visual_context(trigger_refresh=True)
                             return cleaned
                 except Exception as e:
                     print(f"[YAP] Error lokal Ollama: {e}")
 
         # Fallback offline yang variatif dan sesuai kategori layar
         fallback = self._fallback_yap(category)
-        local_vlm.get_visual_context(trigger_refresh=True)
+        local_vlm.local_vlm.get_visual_context(trigger_refresh=True)
         return fallback
 
     def _fallback_yap(self, category: str = "CASUAL_STREAM") -> str:

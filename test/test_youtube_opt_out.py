@@ -1,7 +1,7 @@
 """Regression tests for explicit empty YouTube ID offline mode."""
 import queue
-import chat_listener
-from chat_listener import ChatListener
+from ponyo import chat_listener
+from ponyo.chat_listener import ChatListener
 
 
 def test_explicit_empty_id_disables_youtube_even_when_env_id_exists():

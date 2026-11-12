@@ -1,8 +1,8 @@
 
-from runtime_metrics import RuntimeMetrics
-from worker_runtime import WorkerRuntime
-from tts_engine import TTSEngine
-from chat_listener import ChatListener
+from ponyo.runtime_metrics import RuntimeMetrics
+from ponyo.worker_runtime import WorkerRuntime
+from ponyo.tts_engine import TTSEngine
+from ponyo.chat_listener import ChatListener
 
 
 def test_runtime_metrics_percentiles_and_counters():

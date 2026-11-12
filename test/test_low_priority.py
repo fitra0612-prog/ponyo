@@ -1,9 +1,9 @@
 """Regression tests for low-priority resilience and personalization improvements."""
 
-from ai_brain import AIBrain
-from fallback_engine import FallbackResponseEngine
-from session_memory import SessionMemory
-from visual_validation import classify_visual_context
+from ponyo.ai_brain import AIBrain
+from ponyo.fallback_engine import FallbackResponseEngine
+from ponyo.session_memory import SessionMemory
+from ponyo.visual_validation import classify_visual_context
 
 
 def test_qwen_models_are_explicit_and_selected_only_when_available():

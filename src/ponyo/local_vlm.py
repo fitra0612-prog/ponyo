@@ -19,15 +19,15 @@ from io import BytesIO
 from typing import Optional
 from PIL import Image, ImageGrab
 
-from config import (
+from .config import (
     OLLAMA_URL,
     ENABLE_LOCAL_VLM,
     VLM_MODEL,
     VLM_CACHE_TTL,
     OLLAMA_REQUEST_TIMEOUT,
 )
-from ollama_runtime import ollama_runtime, OllamaResourceBusy
-from structured_logging import structured_logger
+from .ollama_runtime import ollama_runtime, OllamaResourceBusy
+from .structured_logging import structured_logger
 # Area konten utama Display 2 pada host ini:
 DISP2_CONTENT_BBOX = (2060, -910, 3700, -40)
 

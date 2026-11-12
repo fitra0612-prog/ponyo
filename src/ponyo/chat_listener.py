@@ -3,8 +3,8 @@ import os
 import sys
 import threading
 import queue
-from config import YOUTUBE_VIDEO_ID
-from youtube_chat_reader import YouTubeLiveChatReader
+from .config import YOUTUBE_VIDEO_ID
+from .youtube_chat_reader import YouTubeLiveChatReader
 
 # Import GameBridge jika tersedia
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))

@@ -1,6 +1,6 @@
-from ai_brain import AIBrain
-from ollama_runtime import OllamaCircuitBreaker
-from config import OLLAMA_REQUEST_TIMEOUT, OLLAMA_MAX_ATTEMPTS
+from ponyo.ai_brain import AIBrain
+from ponyo.ollama_runtime import OllamaCircuitBreaker
+from ponyo.config import OLLAMA_REQUEST_TIMEOUT, OLLAMA_MAX_ATTEMPTS
 
 
 def test_profile_fast_path_covers_stable_character_facts():

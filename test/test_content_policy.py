@@ -1,5 +1,5 @@
 """Focused tests for YouTube-oriented input/output speech safety."""
-from content_policy import classify_text, safe_output
+from ponyo.content_policy import classify_text, safe_output
 
 
 def test_blocks_sexual_and_minor_sexual_content():
