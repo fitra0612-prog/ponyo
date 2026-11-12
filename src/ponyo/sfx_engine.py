@@ -15,7 +15,8 @@ import wave
 import struct
 import pygame
 
-SFX_DIR = os.path.join(os.path.dirname(__file__), "sfx")
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+SFX_DIR = os.path.join(PROJECT_DIR, "sfx")
 
 
 def _generate_tone_sequence(filepath: str, notes: list, sample_rate: int = 44100):

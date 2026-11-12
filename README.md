@@ -111,33 +111,21 @@ VTUBER/
 ├── src/ponyo/                 # Package runtime Ponyo
 │   ├── ai/                    # (modul AI tetap flat untuk kompatibilitas tahap ini)
 │   └── *.py                   # Modul runtime terstruktur
-├── config.py                  # Konfigurasi terpusat (.env)
-├── .env                       # Variabel rahasia (API keys, stream ID)
-│
-├── ai_brain.py                # Otak AI Ollama + persona Ponyo
-├── language_naturalness.py    # Normalisasi chat, intent, slang relevan, quality gate
-├── tts_engine.py              # Piper Neural TTS + Edge-TTS + deteksi emosi
-├── vtuber_display.py          # Engine avatar Pygame (emosi, animasi, aksesoris)
-│
-├── screen_ocr.py              # WinRT Native OCR (Display 2)
-├── screen_commentator.py      # Auto-yapping campuran layar + celotehan playful
-├── local_vlm.py               # Vision-Language Model lokal (Moondream)
-│
-├── youtube_chat_reader.py     # Pembaca live chat YouTube (InnerTube API)
-├── chat_listener.py           # Pengelola antrian pesan chat + reconnect backoff
-├── runtime_metrics.py         # Counter dan p50/p95/p99 latency in-memory
-├── worker_runtime.py          # Worker lane chat/TTS/VLM/yapping
-├── saweria_receiver.py        # Webhook donasi Saweria
-│
-├── chess_coach.py             # Analisis catur + auto-play
-├── manual_slither_hook.py     # Kontrol slither.io dari chat
-├── chat_quiz.py               # Mini-game kuis interaktif
-├── sfx_engine.py              # Soundboard 8-bit
-│
-├── session_memory.py          # Memori percakapan sesi (RAM)
-├── self_improvement.py        # Loyalitas, slang learner, diary refleksi
-├── yapping_catalog.py         # Katalog topik & sudut pandang celotehan
-├── mic_lip_sync.py            # Lip-sync mikrofon (mode co-host manusia)
+├── src/ponyo/config.py        # Konfigurasi terpusat (.env)
+├── src/ponyo/ai_brain.py      # Otak AI Ollama + persona Ponyo
+├── src/ponyo/tts_engine.py    # Piper Neural TTS + deteksi emosi
+├── src/ponyo/vtuber_display.py # Engine avatar Pygame
+├── src/ponyo/chat_listener.py # Chat YouTube + reconnect backoff
+├── src/ponyo/ollama_runtime.py # Gate inference dan circuit breaker
+├── src/ponyo/worker_runtime.py # Worker lane chat/TTS/VLM/yapping
+├── src/ponyo/saweria_receiver.py # Webhook donasi Saweria
+├── src/ponyo/chess_coach.py  # Integrasi analisis catur
+├── src/ponyo/manual_slither_hook.py # Kontrol Slither dari chat
+├── src/ponyo/chat_quiz.py     # Mini-game kuis interaktif
+├── src/ponyo/session_memory.py # Memori percakapan sesi
+├── src/ponyo/self_improvement.py # Refleksi dan pembelajaran lokal
+├── src/ponyo/sfx_engine.py    # Soundboard 8-bit
+├── .env                       # Variabel rahasia (tidak di-commit)
 │
 ├── tools/
 │   ├── __init__.py
