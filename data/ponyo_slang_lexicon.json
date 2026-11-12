@@ -1,0 +1,86 @@
+{
+  "gg": {
+    "term": "GG",
+    "meaning": "Good Game / permainan atau aksi yang keren banget",
+    "frequency": 17,
+    "sample": "Wah GG banget kamu!"
+  },
+  "hoki": {
+    "term": "Hoki",
+    "meaning": "Lagi beruntung banget / selamat dari bahaya",
+    "frequency": 12,
+    "sample": "Hoki parah bisa lolos dari cacing besar!"
+  },
+  "clutch": {
+    "term": "Clutch",
+    "meaning": "Momen kritis genting yang berhasil dimenangkan secara ajaib",
+    "frequency": 9,
+    "sample": "Aksi clutch Ponyo tadi bikin merinding!"
+  },
+  "turu": {
+    "term": "Turu",
+    "meaning": "Tidur atau istirahat",
+    "frequency": 11,
+    "sample": "Habis stream ini langsung turu ya!"
+  },
+  "mabar": {
+    "term": "Mabar",
+    "meaning": "Main bareng dalam game",
+    "frequency": 14,
+    "sample": "Kapan-kapan kita mabar lagi ya!"
+  },
+  "gas": {
+    "term": "Gas",
+    "meaning": "Ayo mulai, gaskeun, atau terus maju",
+    "frequency": 16,
+    "sample": "Gas terus jangan kasih kendor!"
+  },
+  "suhu": {
+    "term": "Suhu",
+    "meaning": "Pemain yang sangat jago atau master",
+    "frequency": 7,
+    "sample": "Ajarin Ponyo dong wahai suhu!"
+  },
+  "afk": {
+    "term": "AFK",
+    "meaning": "Away From Keyboard / sedang meninggalkan layar sejenak",
+    "frequency": 6,
+    "sample": "Jangan AFK dulu ya, lagi seru nih!"
+  },
+  "ngebug": {
+    "term": "Ngebug",
+    "meaning": "Ada glitch, error, atau keanehan di game",
+    "frequency": 5,
+    "sample": "Wah tadi cacingnya kayak ngebug ya!"
+  },
+  "spill": {
+    "term": "Spill",
+    "meaning": "Membocorkan rahasia atau menceritakan info menarik",
+    "frequency": 9,
+    "sample": "Coba spill tips mainnya dong!"
+  },
+  "wibu": {
+    "term": "WIBU",
+    "meaning": "artinya orang yang suka jejepangan",
+    "frequency": 3,
+    "sample": "Wibu itu artinya orang yang suka jejepangan banget"
+  },
+  "cacing": {
+    "term": "Cacing",
+    "meaning": "sampai ke ranking 1",
+    "frequency": 7,
+    "sample": "soalnya saya pernah bermain game cacing itu sampai ke ranking 1, tetapi itu dulu"
+  },
+  "biasanya": {
+    "term": "Biasanya",
+    "meaning": "jika rame",
+    "frequency": 4,
+    "sample": "Ponyo,pantas sepi,Ponyo tidak pernah upload di vidio short, biasanya itu jika rame, karena semua orang kebanyakan nonton di video short"
+  },
+  "mu": {
+    "term": "MU",
+    "meaning": "rada imut",
+    "frequency": 3,
+    "sample": "Ponyo, suara mu itu rada imut,dan kayak ada suara AI"
+  }
+}

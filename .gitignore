@@ -1,0 +1,29 @@
+# Secrets and local configuration
+.env
+.env.*.local
+*.secret
+
+# Python and local environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Runtime output and local caches
+*.log
+logs/
+cache/
+.cache/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local generated scratch files
+*.tmp
+*.bak

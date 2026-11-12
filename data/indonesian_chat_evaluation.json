@@ -1,0 +1,14 @@
+[
+  {"message": "halo Ponyo", "intent": "greeting", "expected": "sapaan"},
+  {"message": "Ponyo gaskeun", "intent": "support", "expected": "dukungan"},
+  {"message": "Ponyo jago banget", "intent": "compliment", "expected": "pujian"},
+  {"message": "spill build dong", "intent": "question", "expected": "pertanyaan"},
+  {"message": "wkwkwk", "intent": "short_message", "expected": "reaksi singkat"},
+  {"message": "ngab itu apa", "intent": "confused_slang", "expected": "minta arti istilah"},
+  {"message": "mabar kuy", "intent": "support", "expected": "ajakan bermain"},
+  {"message": "yah kalah lagi", "intent": "game_failure", "expected": "kegagalan game"},
+  {"message": "GG Ponyo", "intent": "compliment", "expected": "pujian"},
+  {"message": "kok bisa begitu", "intent": "question", "expected": "pertanyaan"},
+  {"message": "Ponyo gaskeunnn", "intent": "support", "expected": "typo livestream"},
+  {"message": "mabarrr nanti", "intent": "support", "expected": "typo ajakan"}
+]

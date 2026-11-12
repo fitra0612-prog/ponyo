@@ -1,0 +1,164 @@
+{
+  "budi": {
+    "display_name": "Budi",
+    "total_chats": 20,
+    "xp": 485,
+    "level": 4,
+    "rank_title": "Keluarga Keramat Ponyo",
+    "first_seen": "2026-11-08 12:12:25",
+    "last_seen": "2026-11-09 18:18:09",
+    "notes": []
+  },
+  "hfi": {
+    "display_name": "HFI",
+    "total_chats": 1,
+    "xp": 10,
+    "level": 1,
+    "rank_title": "Teman Baru Ponyo",
+    "first_seen": "2026-11-08 12:13:07",
+    "last_seen": "2026-11-08 12:13:07",
+    "notes": [
+      "Suka: main catur dan slither"
+    ]
+  },
+  "audience": {
+    "display_name": "Audience",
+    "total_chats": 50,
+    "xp": 500,
+    "level": 4,
+    "rank_title": "Keluarga Keramat Ponyo",
+    "first_seen": "2026-11-08 12:14:01",
+    "last_seen": "2026-11-11 12:02:59",
+    "notes": []
+  },
+  "penonton": {
+    "display_name": "Penonton",
+    "total_chats": 85,
+    "xp": 1675,
+    "level": 5,
+    "rank_title": "Kapten Setia Ponyo",
+    "first_seen": "2026-11-08 12:18:50",
+    "last_seen": "2026-11-12 09:50:16",
+    "notes": []
+  },
+  "cute_ghost_ponyo": {
+    "display_name": "cute_ghost_ponyo",
+    "total_chats": 21,
+    "xp": 320,
+    "level": 4,
+    "rank_title": "Keluarga Keramat Ponyo",
+    "first_seen": "2026-11-08 18:16:32",
+    "last_seen": "2026-11-10 22:32:41",
+    "notes": []
+  },
+  "gangsterhitam": {
+    "display_name": "GangsterHitam",
+    "total_chats": 3,
+    "xp": 30,
+    "level": 1,
+    "rank_title": "Teman Baru Ponyo",
+    "first_seen": "2026-11-08 19:41:11",
+    "last_seen": "2026-11-08 19:45:08",
+    "notes": []
+  },
+  "sorvia3d": {
+    "display_name": "Sorvia3D",
+    "total_chats": 48,
+    "xp": 480,
+    "level": 4,
+    "rank_title": "Keluarga Keramat Ponyo",
+    "first_seen": "2026-11-08 19:45:49",
+    "last_seen": "2026-11-10 14:58:10",
+    "notes": []
+  },
+  "fatirrr-q4s": {
+    "display_name": "FATIRRR-q4s",
+    "total_chats": 18,
+    "xp": 180,
+    "level": 3,
+    "rank_title": "Sahabat Hantu Ponyo",
+    "first_seen": "2026-11-08 19:49:55",
+    "last_seen": "2026-11-08 20:02:25",
+    "notes": []
+  },
+  "viewer1": {
+    "display_name": "Viewer1",
+    "total_chats": 10,
+    "xp": 235,
+    "level": 3,
+    "rank_title": "Sahabat Hantu Ponyo",
+    "first_seen": "2026-11-09 18:48:06",
+    "last_seen": "2026-11-10 12:44:26",
+    "notes": []
+  },
+  "fauzi": {
+    "display_name": "Fauzi",
+    "total_chats": 1,
+    "xp": 10,
+    "level": 1,
+    "rank_title": "Teman Baru Ponyo",
+    "first_seen": "2026-11-10 12:45:47",
+    "last_seen": "2026-11-10 12:45:47",
+    "notes": []
+  },
+  "rottenfanger": {
+    "display_name": "rottenfanger",
+    "total_chats": 1,
+    "xp": 10,
+    "level": 1,
+    "rank_title": "Teman Baru Ponyo",
+    "first_seen": "2026-11-10 14:55:53",
+    "last_seen": "2026-11-10 14:55:53",
+    "notes": []
+  },
+  "alimuddin3530": {
+    "display_name": "alimuddin3530",
+    "total_chats": 1,
+    "xp": 10,
+    "level": 1,
+    "rank_title": "Teman Baru Ponyo",
+    "first_seen": "2026-11-10 17:22:21",
+    "last_seen": "2026-11-10 17:22:21",
+    "notes": []
+  },
+  "rina": {
+    "display_name": "Rina",
+    "total_chats": 5,
+    "xp": 50,
+    "level": 2,
+    "rank_title": "Teman Nongkrong Ponyo",
+    "first_seen": "2026-11-11 11:39:24",
+    "last_seen": "2026-11-11 12:02:29",
+    "notes": []
+  },
+  "cuteghostponyo": {
+    "display_name": "cuteghostponyo",
+    "total_chats": 2,
+    "xp": 20,
+    "level": 1,
+    "rank_title": "Teman Baru Ponyo",
+    "first_seen": "2026-11-11 12:18:34",
+    "last_seen": "2026-11-11 12:36:08",
+    "notes": []
+  },
+  "sorviad": {
+    "display_name": "SorviaD",
+    "total_chats": 4,
+    "xp": 40,
+    "level": 1,
+    "rank_title": "Teman Baru Ponyo",
+    "first_seen": "2026-11-11 12:27:14",
+    "last_seen": "2026-11-11 12:30:51",
+    "notes": []
+  },
+  "nullbossbaldibasicga": {
+    "display_name": "NullbossBaldiBasicga",
+    "total_chats": 1,
+    "xp": 10,
+    "level": 1,
+    "rank_title": "Teman Baru Ponyo",
+    "first_seen": "2026-11-11 12:52:36",
+    "last_seen": "2026-11-11 12:52:36",
+    "notes": []
+  }
+}
